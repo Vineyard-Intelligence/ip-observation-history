@@ -6,6 +6,7 @@
 // Times are DAYS, not timestamps: an entry's first_seen is the day it first appeared in a collection,
 // so a delayed cron shifts a date by one at worst instead of corrupting an interval.
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
+import { execFileSync } from "node:child_process";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -72,6 +73,24 @@ function addresses(kind, payload) {
   return [];
 }
 
+/**
+ * The commit a git-hosted source currently points at, so a row discovered today can name the exact
+ * file it was read from. `git ls-remote` needs no API token and one call per repository, not per
+ * source. Sources that are APIs (VPN providers, vendor JSON feeds) have no repo and stay null.
+ */
+async function branchTip(repo, branch) {
+  try {
+    const out = execFileSync("git", ["ls-remote", `https://github.com/${repo}.git`, `refs/heads/${branch}`], {
+      encoding: "utf8",
+      timeout: 30_000,
+    });
+    const sha = out.trim().split(/\s+/)[0];
+    return /^[0-9a-f]{40}$/.test(sha) ? sha.slice(0, 8) : null;
+  } catch {
+    return null;
+  }
+}
+
 async function fetchText(url, tries = 3) {
   for (let i = 0; i < tries; i++) {
     try {
@@ -101,6 +120,15 @@ const daysBetween = (a, b) => Math.round((Date.parse(b) - Date.parse(a)) / 86_40
 async function main() {
   mkdirSync(STATE_DIR, { recursive: true });
   mkdirSync(DELTA_DIR, { recursive: true });
+
+  const tips = new Map();
+  const parse = (url) => url.match(/raw\.githubusercontent\.com\/([^/]+\/[^/]+)\/([^/]+)\//);
+  for (const src of SOURCES) {
+    const m = parse(src.url);
+    if (!m) continue;
+    const key = `${m[1]}@${m[2]}`;
+    if (!tips.has(key)) tips.set(key, await branchTip(m[1], m[2]));
+  }
 
   const results = new Map();
   const failures = [];
@@ -155,7 +183,9 @@ async function main() {
           // Discovered by us: this day is both the first appearance we know of and our first sighting.
           // At bootstrap everything is inherited, so first_seen stays null (see coverage_start).
           const inherited = state.coverage_start === TODAY;
-          next[cidr] = [inherited ? null : RUN_ISO, RUN_ISO, "o", null, null, RUN_ISO];
+          const m = parse(src.url);
+          const tip = m ? tips.get(`${m[1]}@${m[2]}`) ?? null : null;
+          next[cidr] = [inherited ? null : RUN_ISO, RUN_ISO, "o", tip, tip, RUN_ISO];
           added++;
           (delta.added[src.label] ??= []).push(cidr);
         }

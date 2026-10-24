@@ -31,7 +31,13 @@ jobs:
           fetch-depth: 0
 
       - name: Squash history
-        run: bash scripts/squash-history.sh --days "${{ github.event.inputs.days || 30 }}"
+        env:
+          DAYS: ${{ github.event.inputs.days || 30 }}
+        run: |
+          case "$DAYS" in (*[!0-9]*|"") echo "days must be a number" >&2; exit 2;; esac
+          bash scripts/squash-history.sh --days "$DAYS"
 
       - name: Push
-        run: git push --force-with-lease origin "HEAD:${{ github.ref_name }}"
+        env:
+          BRANCH: ${{ github.ref_name }}
+        run: git push --force-with-lease origin "HEAD:$BRANCH"
