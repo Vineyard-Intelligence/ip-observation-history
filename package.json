@@ -1,0 +1,11 @@
+{
+  "name": "ip-observation-history",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "backfill": "node scripts/backfill.mjs",
+    "collect": "node scripts/collect.mjs",
+    "build": "node scripts/build-shards.mjs",
+    "update": "node scripts/collect.mjs && node scripts/build-shards.mjs"
+  }
+}

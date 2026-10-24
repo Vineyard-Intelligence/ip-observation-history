@@ -1,0 +1,60 @@
+name: collect
+
+# Twice a day, fixed UTC times so the recorded dates do not drift.
+on:
+  schedule:
+    - cron: "15 0 * * *"
+    - cron: "15 12 * * *"
+  workflow_dispatch:
+
+# The job commits its own state. GITHUB_TOKEN pushes do not trigger other workflows, which is what we
+# want: this is the only thing that writes here.
+permissions:
+  contents: write
+
+concurrency:
+  group: repo-write
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Collect and rebuild shards
+        run: |
+          node scripts/collect.mjs
+          node scripts/build-shards.mjs
+
+      # A run that fails halfway still commits what it did get, so one bad source does not stall the
+      # whole history. The failure list lands in deltas/runs.json.
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "no changes"
+          else
+            git commit -m "collect $(date -u +%Y-%m-%dT%H:%MZ)"
+            git push
+          fi
+
+      # Two missed runs in a row is a 24-hour hole. Open one issue and stop piling on.
+      - name: Warn on repeated failure
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          existing=$(gh issue list --label collection-failure --state open --json number --jq 'length')
+          if [ "$existing" = "0" ]; then
+            gh issue create --title "collection failed on $(date -u +%F)" \
+              --label collection-failure \
+              --body "The scheduled collection did not finish. Check the run log: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          fi

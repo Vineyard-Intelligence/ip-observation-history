@@ -1,0 +1,569 @@
+[
+  {
+    "bucket": "scanners",
+    "name": "Shodan",
+    "label": "shodan",
+    "url": "https://raw.githubusercontent.com/OpenFilters/internet-scanners/main/cidr/shodan_v4.txt",
+    "kind": "cidr"
+  },
+  {
+    "bucket": "scanners",
+    "name": "Censys",
+    "label": "censys",
+    "url": "https://raw.githubusercontent.com/OpenFilters/internet-scanners/main/cidr/censys_v4.txt",
+    "kind": "cidr"
+  },
+  {
+    "bucket": "scanners",
+    "name": "Tenable",
+    "label": "tenable",
+    "url": "https://raw.githubusercontent.com/OpenFilters/internet-scanners/main/cidr/tenableasm_v4.txt",
+    "kind": "cidr"
+  },
+  {
+    "bucket": "scanners",
+    "name": "BinaryEdge",
+    "label": "binaryedge",
+    "url": "https://raw.githubusercontent.com/OpenFilters/internet-scanners/main/cidr/binaryedge_v4.txt",
+    "kind": "cidr"
+  },
+  {
+    "bucket": "scanners",
+    "name": "Stretchoid",
+    "label": "stretchoid",
+    "url": "https://raw.githubusercontent.com/OpenFilters/internet-scanners/main/cidr/strechoid_v4.txt",
+    "kind": "cidr"
+  },
+  {
+    "bucket": "scanners",
+    "name": "Hunter",
+    "label": "hunter",
+    "url": "https://raw.githubusercontent.com/OpenFilters/internet-scanners/main/cidr/hunter_v4.txt",
+    "kind": "cidr"
+  },
+  {
+    "bucket": "scanners",
+    "name": "Quake",
+    "label": "quake",
+    "url": "https://raw.githubusercontent.com/OpenFilters/internet-scanners/main/cidr/quake_v4.txt",
+    "kind": "cidr"
+  },
+  {
+    "bucket": "scanners",
+    "name": "FOFA",
+    "label": "fofa",
+    "url": "https://raw.githubusercontent.com/OpenFilters/internet-scanners/main/cidr/fofa_v4.txt",
+    "kind": "cidr"
+  },
+  {
+    "bucket": "scanners",
+    "name": "ZoomEye",
+    "label": "zoomeye",
+    "url": "https://raw.githubusercontent.com/OpenFilters/internet-scanners/main/cidr/zoomeye_v4.txt",
+    "kind": "cidr"
+  },
+  {
+    "bucket": "scanners",
+    "name": "LeakIX",
+    "label": "leakix",
+    "url": "https://raw.githubusercontent.com/OpenFilters/internet-scanners/main/cidr/leakix_v4.txt",
+    "kind": "cidr"
+  },
+  {
+    "bucket": "scanners",
+    "name": "Netlas",
+    "label": "netlas",
+    "url": "https://raw.githubusercontent.com/OpenFilters/internet-scanners/main/cidr/netlas_v4.txt",
+    "kind": "cidr"
+  },
+  {
+    "bucket": "scanners",
+    "name": "ONYPHE",
+    "label": "onyphe",
+    "url": "https://raw.githubusercontent.com/OpenFilters/internet-scanners/main/cidr/onyphe_v4.txt",
+    "kind": "cidr"
+  },
+  {
+    "bucket": "scanners",
+    "name": "Criminal IP",
+    "label": "criminal_ip",
+    "url": "https://raw.githubusercontent.com/OpenFilters/internet-scanners/main/cidr/criminalip_v4.txt",
+    "kind": "cidr"
+  },
+  {
+    "bucket": "scanners",
+    "name": "Bitsight",
+    "label": "bitsight",
+    "url": "https://raw.githubusercontent.com/OpenFilters/internet-scanners/main/cidr/bitsight_v4.txt",
+    "kind": "cidr"
+  },
+  {
+    "bucket": "scanners",
+    "name": "Palo Alto Expanse",
+    "label": "palo_alto_expanse",
+    "url": "https://raw.githubusercontent.com/OpenFilters/internet-scanners/main/cidr/paloaltonetworks_v4.txt",
+    "kind": "cidr"
+  },
+  {
+    "bucket": "scanners",
+    "name": "Recorded Future",
+    "label": "recorded_future",
+    "url": "https://raw.githubusercontent.com/OpenFilters/internet-scanners/main/cidr/recordedfuture_v4.txt",
+    "kind": "cidr"
+  },
+  {
+    "bucket": "scanners",
+    "name": "Mandiant",
+    "label": "mandiant",
+    "url": "https://raw.githubusercontent.com/OpenFilters/internet-scanners/main/cidr/mandiantasm_v4.txt",
+    "kind": "cidr"
+  },
+  {
+    "bucket": "scanners",
+    "name": "Group-IB",
+    "label": "group_ib",
+    "url": "https://raw.githubusercontent.com/OpenFilters/internet-scanners/main/cidr/groupib_v4.txt",
+    "kind": "cidr"
+  },
+  {
+    "bucket": "scanners",
+    "name": "VirusTotal",
+    "label": "virustotal",
+    "url": "https://raw.githubusercontent.com/OpenFilters/internet-scanners/main/cidr/virustotal_v4.txt",
+    "kind": "cidr"
+  },
+  {
+    "bucket": "scanners",
+    "name": "Intrinsec",
+    "label": "intrinsec",
+    "url": "https://raw.githubusercontent.com/OpenFilters/internet-scanners/main/cidr/intrinsec_v4.txt",
+    "kind": "cidr"
+  },
+  {
+    "bucket": "scanners",
+    "name": "Shadowserver",
+    "label": "shadowserver",
+    "url": "https://raw.githubusercontent.com/OpenFilters/internet-scanners/main/cidr/shadowserver_v4.txt",
+    "kind": "cidr"
+  },
+  {
+    "bucket": "scanners",
+    "name": "Rapid7",
+    "label": "rapid7",
+    "url": "https://raw.githubusercontent.com/OpenFilters/internet-scanners/main/cidr/rapid7_v4.txt",
+    "kind": "cidr"
+  },
+  {
+    "bucket": "c2",
+    "name": "Cobalt Strike",
+    "label": "cobalt_strike",
+    "url": "https://raw.githubusercontent.com/HL-SOC/C2-Tracker/main/data/Cobalt%20Strike%20C2%20IPs.txt",
+    "kind": "ips"
+  },
+  {
+    "bucket": "c2",
+    "name": "Sliver",
+    "label": "sliver",
+    "url": "https://raw.githubusercontent.com/HL-SOC/C2-Tracker/main/data/Sliver%20C2%20IPs.txt",
+    "kind": "ips"
+  },
+  {
+    "bucket": "c2",
+    "name": "Metasploit",
+    "label": "metasploit",
+    "url": "https://raw.githubusercontent.com/HL-SOC/C2-Tracker/main/data/Metasploit%20Framework%20C2%20IPs.txt",
+    "kind": "ips"
+  },
+  {
+    "bucket": "c2",
+    "name": "Mythic",
+    "label": "mythic",
+    "url": "https://raw.githubusercontent.com/HL-SOC/C2-Tracker/main/data/Mythic%20C2%20IPs.txt",
+    "kind": "ips"
+  },
+  {
+    "bucket": "c2",
+    "name": "Havoc",
+    "label": "havoc",
+    "url": "https://raw.githubusercontent.com/HL-SOC/C2-Tracker/main/data/Havoc%20C2%20IPs.txt",
+    "kind": "ips"
+  },
+  {
+    "bucket": "c2",
+    "name": "Brute Ratel C4",
+    "label": "brute_ratel_c4",
+    "url": "https://raw.githubusercontent.com/HL-SOC/C2-Tracker/main/data/Brute%20Ratel%20C4%20IPs.txt",
+    "kind": "ips"
+  },
+  {
+    "bucket": "c2",
+    "name": "Covenant",
+    "label": "covenant",
+    "url": "https://raw.githubusercontent.com/HL-SOC/C2-Tracker/main/data/Covenant%20C2%20IPs.txt",
+    "kind": "ips"
+  },
+  {
+    "bucket": "c2",
+    "name": "Empire",
+    "label": "empire",
+    "url": "https://raw.githubusercontent.com/HL-SOC/C2-Tracker/main/data/Empire%20C2%20IPs.txt",
+    "kind": "ips"
+  },
+  {
+    "bucket": "c2",
+    "name": "Posh",
+    "label": "posh",
+    "url": "https://raw.githubusercontent.com/HL-SOC/C2-Tracker/main/data/Posh%20C2%20IPs.txt",
+    "kind": "ips"
+  },
+  {
+    "bucket": "c2",
+    "name": "Caldera",
+    "label": "caldera",
+    "url": "https://raw.githubusercontent.com/HL-SOC/C2-Tracker/main/data/Caldera%20C2%20IPs.txt",
+    "kind": "ips"
+  },
+  {
+    "bucket": "c2",
+    "name": "Deimos",
+    "label": "deimos",
+    "url": "https://raw.githubusercontent.com/HL-SOC/C2-Tracker/main/data/Deimos%20C2%20IPs.txt",
+    "kind": "ips"
+  },
+  {
+    "bucket": "c2",
+    "name": "NimPlant",
+    "label": "nimplant",
+    "url": "https://raw.githubusercontent.com/HL-SOC/C2-Tracker/main/data/NimPlant%20C2%20IPs.txt",
+    "kind": "ips"
+  },
+  {
+    "bucket": "c2",
+    "name": "Viper",
+    "label": "viper",
+    "url": "https://raw.githubusercontent.com/HL-SOC/C2-Tracker/main/data/Viper%20C2%20IPs.txt",
+    "kind": "ips"
+  },
+  {
+    "bucket": "c2",
+    "name": "Villain",
+    "label": "villain",
+    "url": "https://raw.githubusercontent.com/HL-SOC/C2-Tracker/main/data/Villain%20C2%20IPs.txt",
+    "kind": "ips"
+  },
+  {
+    "bucket": "c2",
+    "name": "Supershell",
+    "label": "supershell",
+    "url": "https://raw.githubusercontent.com/HL-SOC/C2-Tracker/main/data/Supershell%20C2%20IPs.txt",
+    "kind": "ips"
+  },
+  {
+    "bucket": "c2",
+    "name": "RedGuard",
+    "label": "redguard",
+    "url": "https://raw.githubusercontent.com/HL-SOC/C2-Tracker/main/data/RedGuard%20C2%20IPs.txt",
+    "kind": "ips"
+  },
+  {
+    "bucket": "c2",
+    "name": "PANDA",
+    "label": "panda",
+    "url": "https://raw.githubusercontent.com/HL-SOC/C2-Tracker/main/data/PANDA%20C2%20IPs.txt",
+    "kind": "ips"
+  },
+  {
+    "bucket": "c2",
+    "name": "Hak5 Cloud C2",
+    "label": "hak5_cloud_c2",
+    "url": "https://raw.githubusercontent.com/HL-SOC/C2-Tracker/main/data/Hak5%20Cloud%20C2%20IPs.txt",
+    "kind": "ips"
+  },
+  {
+    "bucket": "c2",
+    "name": "Unam Web Panel",
+    "label": "unam_web_panel",
+    "url": "https://raw.githubusercontent.com/HL-SOC/C2-Tracker/main/data/Unam%20Web%20Panel%20IPs.txt",
+    "kind": "ips"
+  },
+  {
+    "bucket": "c2",
+    "name": "Sectop",
+    "label": "sectop",
+    "url": "https://raw.githubusercontent.com/HL-SOC/C2-Tracker/main/data/Sectop%20RAT%20IPs.txt",
+    "kind": "ips"
+  },
+  {
+    "bucket": "c2",
+    "name": "Quasar",
+    "label": "quasar",
+    "url": "https://raw.githubusercontent.com/HL-SOC/C2-Tracker/main/data/Quasar%20RAT%20IPs.txt",
+    "kind": "ips"
+  },
+  {
+    "bucket": "c2",
+    "name": "Remcos",
+    "label": "remcos",
+    "url": "https://raw.githubusercontent.com/HL-SOC/C2-Tracker/main/data/Remcos%20RAT%20IPs.txt",
+    "kind": "ips"
+  },
+  {
+    "bucket": "c2",
+    "name": "njRAT",
+    "label": "njrat",
+    "url": "https://raw.githubusercontent.com/HL-SOC/C2-Tracker/main/data/njRAT%20Trojan%20IPs.txt",
+    "kind": "ips"
+  },
+  {
+    "bucket": "c2",
+    "name": "NanoCore",
+    "label": "nanocore",
+    "url": "https://raw.githubusercontent.com/HL-SOC/C2-Tracker/main/data/NanoCore%20RAT%20Trojan%20IPs.txt",
+    "kind": "ips"
+  },
+  {
+    "bucket": "c2",
+    "name": "DcRAT",
+    "label": "dcrat",
+    "url": "https://raw.githubusercontent.com/HL-SOC/C2-Tracker/main/data/DcRAT%20IPs.txt",
+    "kind": "ips"
+  },
+  {
+    "bucket": "c2",
+    "name": "AsyncRAT",
+    "label": "asyncrat",
+    "url": "https://raw.githubusercontent.com/HL-SOC/C2-Tracker/main/data/AsyncRAT%20IPs.txt",
+    "kind": "ips"
+  },
+  {
+    "bucket": "c2",
+    "name": "Gh0st",
+    "label": "gh0st",
+    "url": "https://raw.githubusercontent.com/HL-SOC/C2-Tracker/main/data/Gh0st%20RAT%20Trojan%20IPs.txt",
+    "kind": "ips"
+  },
+  {
+    "bucket": "c2",
+    "name": "XtremeRAT",
+    "label": "xtremerat",
+    "url": "https://raw.githubusercontent.com/HL-SOC/C2-Tracker/main/data/XtremeRAT%20Trojan%20IPs.txt",
+    "kind": "ips"
+  },
+  {
+    "bucket": "c2",
+    "name": "DarkComet",
+    "label": "darkcomet",
+    "url": "https://raw.githubusercontent.com/HL-SOC/C2-Tracker/main/data/DarkComet%20Trojan%20IPs.txt",
+    "kind": "ips"
+  },
+  {
+    "bucket": "c2",
+    "name": "NetBus",
+    "label": "netbus",
+    "url": "https://raw.githubusercontent.com/HL-SOC/C2-Tracker/main/data/NetBus%20Trojan%20IPs.txt",
+    "kind": "ips"
+  },
+  {
+    "bucket": "c2",
+    "name": "Hookbot",
+    "label": "hookbot",
+    "url": "https://raw.githubusercontent.com/HL-SOC/C2-Tracker/main/data/Hookbot%20IPs.txt",
+    "kind": "ips"
+  },
+  {
+    "bucket": "c2",
+    "name": "ShadowPad",
+    "label": "shadowpad",
+    "url": "https://raw.githubusercontent.com/HL-SOC/C2-Tracker/main/data/ShadowPad%20IPs.txt",
+    "kind": "ips"
+  },
+  {
+    "bucket": "c2",
+    "name": "GoPhish",
+    "label": "gophish",
+    "url": "https://raw.githubusercontent.com/HL-SOC/C2-Tracker/main/data/GoPhish%20IPs.txt",
+    "kind": "ips"
+  },
+  {
+    "bucket": "c2",
+    "name": "XMRig",
+    "label": "xmrig",
+    "url": "https://raw.githubusercontent.com/HL-SOC/C2-Tracker/main/data/XMRig%20Monero%20Cryptominer%20IPs.txt",
+    "kind": "ips"
+  },
+  {
+    "bucket": "c2",
+    "name": "BurpSuite",
+    "label": "burpsuite",
+    "url": "https://raw.githubusercontent.com/HL-SOC/C2-Tracker/main/data/BurpSuite%20IPs.txt",
+    "kind": "ips"
+  },
+  {
+    "bucket": "c2",
+    "name": "MobSF",
+    "label": "mobsf",
+    "url": "https://raw.githubusercontent.com/HL-SOC/C2-Tracker/main/data/MobSF%20IPs.txt",
+    "kind": "ips"
+  },
+  {
+    "bucket": "bots",
+    "name": "Googlebot",
+    "label": "googlebot",
+    "url": "https://developers.google.com/static/search/apis/ipranges/googlebot.json",
+    "kind": "prefixes"
+  },
+  {
+    "bucket": "bots",
+    "name": "Google Special Crawlers",
+    "label": "google_special_crawlers",
+    "url": "https://developers.google.com/static/search/apis/ipranges/special-crawlers.json",
+    "kind": "prefixes"
+  },
+  {
+    "bucket": "bots",
+    "name": "Google User-Triggered",
+    "label": "google_user_triggered",
+    "url": "https://developers.google.com/static/search/apis/ipranges/user-triggered-fetchers.json",
+    "kind": "prefixes"
+  },
+  {
+    "bucket": "bots",
+    "name": "Bingbot",
+    "label": "bingbot",
+    "url": "https://www.bing.com/toolbox/bingbot.json",
+    "kind": "prefixes"
+  },
+  {
+    "bucket": "bots",
+    "name": "Applebot",
+    "label": "applebot",
+    "url": "https://search.developer.apple.com/applebot.json",
+    "kind": "prefixes"
+  },
+  {
+    "bucket": "bots",
+    "name": "GPTBot",
+    "label": "gptbot",
+    "url": "https://openai.com/gptbot.json",
+    "kind": "prefixes"
+  },
+  {
+    "bucket": "bots",
+    "name": "OAI-SearchBot",
+    "label": "oai_searchbot",
+    "url": "https://openai.com/searchbot.json",
+    "kind": "prefixes"
+  },
+  {
+    "bucket": "bots",
+    "name": "ChatGPT-User",
+    "label": "chatgpt_user",
+    "url": "https://openai.com/chatgpt-user.json",
+    "kind": "prefixes"
+  },
+  {
+    "bucket": "bots",
+    "name": "ClaudeBot",
+    "label": "claudebot",
+    "url": "https://claude.com/crawling/bots.json",
+    "kind": "prefixes"
+  },
+  {
+    "bucket": "bots",
+    "name": "PerplexityBot",
+    "label": "perplexitybot",
+    "url": "https://www.perplexity.com/perplexitybot.json",
+    "kind": "prefixes"
+  },
+  {
+    "bucket": "anonymizer",
+    "name": "NordVPN",
+    "label": "nordvpn_entry",
+    "url": "https://api.nordvpn.com/v2/servers?limit=0",
+    "kind": "json"
+  },
+  {
+    "bucket": "anonymizer",
+    "name": "Mullvad",
+    "label": "mullvad_entry",
+    "url": "https://api.mullvad.net/www/relays/all/",
+    "kind": "json"
+  },
+  {
+    "bucket": "anonymizer",
+    "name": "AirVPN",
+    "label": "airvpn_entry",
+    "url": "https://airvpn.org/api/status/",
+    "kind": "airvpn"
+  },
+  {
+    "bucket": "anonymizer",
+    "name": "Privado",
+    "label": "privado_entry",
+    "url": "https://privadovpn.com/apps/servers_export.json",
+    "kind": "json"
+  },
+  {
+    "bucket": "anonymizer",
+    "name": "Surfshark",
+    "label": "surfshark_entry",
+    "url": "https://api.surfshark.com/v4/server/clusters/generic",
+    "kind": "json"
+  },
+  {
+    "bucket": "anonymizer",
+    "name": "IVPN",
+    "label": "ivpn_entry",
+    "url": "https://api.ivpn.net/v4/servers/stats",
+    "kind": "json"
+  },
+  {
+    "bucket": "anonymizer",
+    "name": "VyprVPN",
+    "label": "vyprvpn_entry",
+    "url": "https://support.vyprvpn.com/hc/article_attachments/46761120489229",
+    "kind": "ovpnzip"
+  },
+  {
+    "bucket": "anonymizer",
+    "name": "TorGuard",
+    "label": "torguard_entry",
+    "url": "https://torguard.net/downloads/OpenVPN-TCP-Linux.zip",
+    "kind": "ovpnzip"
+  },
+  {
+    "bucket": "anonymizer",
+    "name": "iCloud Private Relay",
+    "label": "icloud_private_relay",
+    "url": "https://raw.githubusercontent.com/hroost/icloud-private-relay-iplist/main/ipv4/ipv4-ranges.txt",
+    "kind": "cidr"
+  },
+  {
+    "bucket": "anonymizer",
+    "name": "Tor exit node",
+    "label": "tor_exit_node",
+    "url": "https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/tor_exits.ipset",
+    "kind": "cidr"
+  },
+  {
+    "bucket": "anonymizer",
+    "name": "SOCKS proxy",
+    "label": "socks_proxy",
+    "url": "https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/socks_proxy.ipset",
+    "kind": "cidr"
+  },
+  {
+    "bucket": "anonymizer",
+    "name": "SSL proxy",
+    "label": "ssl_proxy",
+    "url": "https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/sslproxies.ipset",
+    "kind": "cidr"
+  },
+  {
+    "bucket": "bogon",
+    "name": "Unallocated / bogon",
+    "label": "unallocated_bogon",
+    "url": "https://www.team-cymru.org/Services/Bogons/fullbogons-ipv4.txt",
+    "kind": "cidr"
+  }
+]
