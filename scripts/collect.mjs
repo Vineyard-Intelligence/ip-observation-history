@@ -85,7 +85,9 @@ async function branchTip(repo, branch) {
       timeout: 30_000,
     });
     const sha = out.trim().split(/\s+/)[0];
-    return /^[0-9a-f]{40}$/.test(sha) ? sha.slice(0, 8) : null;
+    // The full commit, not an abbreviation: a pin that resolves today still has to name exactly one
+    // commit, and "80073589" reads like an id rather than a revision to anyone reviewing a source.
+    return /^[0-9a-f]{40}$/.test(sha) ? sha : null;
   } catch {
     return null;
   }

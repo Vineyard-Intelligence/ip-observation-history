@@ -81,7 +81,7 @@ function hasHistory(dir) {
  * Returns Map<cidr, { first, last, firstRef, lastRef }> — dates as YYYY-MM-DD, refs as short SHAs.
  */
 function replay(dir, path) {
-  const logArgs = ["-C", dir, "log", "--reverse", "-p", "--format=COMMIT %h %aI", "--", path];
+  const logArgs = ["-C", dir, "log", "--reverse", "-p", "--format=COMMIT %H %aI", "--", path];
   if (since) logArgs.splice(3, 0, `--since=${since}`);
   const out = execFileSync("git", logArgs, { encoding: "utf8", maxBuffer: 1024 * 1024 * 1024 });
 

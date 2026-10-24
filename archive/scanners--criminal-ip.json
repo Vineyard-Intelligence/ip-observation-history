@@ -1,1 +1,1 @@
-{"label":"criminal_ip","source":"https://raw.githubusercontent.com/OpenFilters/internet-scanners/main/cidr/criminalip_v4.txt","entries":{"185.242.226.0/24":["2025-11-20","2025-11-20","d3e4a88","d3e4a88"]}}
+{"label":"criminal_ip","source":"https://raw.githubusercontent.com/OpenFilters/internet-scanners/main/cidr/criminalip_v4.txt","entries":{"185.242.226.0/24":["2025-11-20","2025-11-20","d3e4a88397c23facd4f141fc6bc11002a56d2820","d3e4a88397c23facd4f141fc6bc11002a56d2820"]}}
